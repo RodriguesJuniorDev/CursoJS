@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Nacionalidade</title>
+</head>
+<body>
+    <h1>Sistemas de Nacionalidade</h1>
+    você é de qual país? <input type="text" id="nac">
+    <input type="button" value="verificar" onclick="pesquisar()">
+    <div id="Nacionalidade">
+
+    </div>
+    <script>
+        function pesquisar() {
+            var pais = document.getElementById("nac")
+            var Nacionalidade = document.getElementById("Nacionalidade")
+            var doidera = (nac.value)
+            Nacionalidade.innerHTML = `<p>O país que você informou é ${doidera}</p>`
+            if (pais != "Brasil") {
+                Nacionalidade.innerHTML += `<p> você é estrangeiro.</p>`
+            }else {
+                Nacionalidade.innerHTML += `<p>O país que você informou é ${doidera}, você é Brasileiro!!.</p>`
+            }
+        }
+    </script>
+</body>
+</html>
